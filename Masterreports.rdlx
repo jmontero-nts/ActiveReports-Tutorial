@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+  <dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Masterreports.rdlx</dd:Name>
+  <PageHeader>
+    <Height>0.6563in</Height>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <ReportItems>
+      <Textbox Name="TextBox4">
+        <Top>0.1355in</Top>
+        <Left>0.0521in</Left>
+        <Width>5.1355in</Width>
+        <Height>0.4166in</Height>
+        <Style>
+          <BackgroundColor>#f1f1f1</BackgroundColor>
+          <Color>#3da7a8</Color>
+          <FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+          <FontSize>16pt</FontSize>
+          <FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+          <FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Middle</VerticalAlign>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Custom>
+          <ReportStyle>
+            <StyleId>0b65e860-6c8c-4d79-9c06-69f939517ae6</StyleId>
+            <StyleName>Dark 1 Major</StyleName>
+          </ReportStyle>
+        </Custom>
+        <Value>Employee Orders Report (Master-Detail Report)</Value>
+      </Textbox>
+    </ReportItems>
+    <Style>
+      <BackgroundColor>#f1f1f1</BackgroundColor>
+    </Style>
+  </PageHeader>
+  <Body>
+    <ColumnSpacing>0in</ColumnSpacing>
+    <Height>1.5in</Height>
+    <ReportItems>
+      <List Name="List1">
+        <Custom>
+          <ReportStyle>
+            <StyleId>2b3ab600-cc7f-4ffe-abcb-7adba37adff5</StyleId>
+            <StyleName>Default List</StyleName>
+          </ReportStyle>
+        </Custom>
+        <DataSetName>master</DataSetName>
+        <Top>0.25in</Top>
+        <Width>6.5in</Width>
+        <Height>1.25in</Height>
+        <ReportItems>
+          <Textbox Name="TextBox1">
+            <Top>0.5in</Top>
+            <Width>6.5in</Width>
+            <Height>0.25in</Height>
+            <Style>
+              <BackgroundColor>=Theme.Colors!Light1</BackgroundColor>
+              <Color>=Theme.Colors!Dark1</Color>
+              <FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+              <FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+              <FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+              <FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Custom>
+              <ReportStyle>
+                <StyleId>0b65e860-6c8c-4d79-9c06-69f939517ae6</StyleId>
+                <StyleName>Dark 1 Major</StyleName>
+              </ReportStyle>
+            </Custom>
+            <Value>=Fields!City.Value &amp; ", " &amp; Fields!Country.Value</Value>
+          </Textbox>
+          <Textbox Name="TextBox2">
+            <Top>0.25in</Top>
+            <Width>6.5in</Width>
+            <Height>0.25in</Height>
+            <Style>
+              <BackgroundColor>=Theme.Colors!Light1</BackgroundColor>
+              <Color>=Theme.Colors!Dark1</Color>
+              <FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+              <FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+              <FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+              <FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Custom>
+              <ReportStyle>
+                <StyleId>0b65e860-6c8c-4d79-9c06-69f939517ae6</StyleId>
+                <StyleName>Dark 1 Major</StyleName>
+              </ReportStyle>
+            </Custom>
+            <Value>="Title: " &amp; Fields!Title.Value</Value>
+          </Textbox>
+          <Textbox Name="TextBox3">
+            <Width>6.5in</Width>
+            <Height>0.25in</Height>
+            <Style>
+              <BackgroundColor>=Theme.Colors!Light1</BackgroundColor>
+              <Color>=Theme.Colors!Dark1</Color>
+              <FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+              <FontSize>=Theme.Fonts!MajorFont.Size</FontSize>
+              <FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+              <FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Custom>
+              <ReportStyle>
+                <StyleId>0b65e860-6c8c-4d79-9c06-69f939517ae6</StyleId>
+                <StyleName>Dark 1 Major</StyleName>
+              </ReportStyle>
+            </Custom>
+            <Value>="Name: " &amp; Fields!FirstName.Value &amp; " " &amp; Fields!LastName.Value</Value>
+          </Textbox>
+          <Subreport Name="Subreport1">
+            <Top>0.75in</Top>
+            <Width>6.5in</Width>
+            <Height>0.5in</Height>
+            <ZIndex>4</ZIndex>
+            <Parameters>
+              <Parameter Name="Parameter1">
+                <Value>=Fields!EmployeeId.Value</Value>
+              </Parameter>
+            </Parameters>
+            <ReportName>Subreport.rdlx</ReportName>
+          </Subreport>
+        </ReportItems>
+      </List>
+    </ReportItems>
+  </Body>
+  <BottomMargin>1in</BottomMargin>
+  <LeftMargin>1in</LeftMargin>
+  <PageHeight>11in</PageHeight>
+  <PageWidth>8.5in</PageWidth>
+  <RightMargin>1in</RightMargin>
+  <TopMargin>1in</TopMargin>
+  <Width>6.5in</Width>
+  <DataSources>
+    <DataSource Name="Master">
+      <ConnectionProperties>
+        <ConnectString>jsondoc=https://demodata.grapecity.com/northwind/odata/v1/Employees;</ConnectString>
+        <DataProvider>JSON</DataProvider>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="master">
+      <Fields>
+        <Field Name="EmployeeId">
+          <DataField>EmployeeId</DataField>
+        </Field>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+        </Field>
+        <Field Name="Title">
+          <DataField>Title</DataField>
+        </Field>
+        <Field Name="TitleOfCourtesy">
+          <DataField>TitleOfCourtesy</DataField>
+        </Field>
+        <Field Name="BirthDate">
+          <DataField>BirthDate</DataField>
+        </Field>
+        <Field Name="HireDate">
+          <DataField>HireDate</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="Region">
+          <DataField>Region</DataField>
+        </Field>
+        <Field Name="PostalCode">
+          <DataField>PostalCode</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="HomePhone">
+          <DataField>HomePhone</DataField>
+        </Field>
+        <Field Name="Extension">
+          <DataField>Extension</DataField>
+        </Field>
+        <Field Name="Photo">
+          <DataField>Photo</DataField>
+        </Field>
+        <Field Name="Notes">
+          <DataField>Notes</DataField>
+        </Field>
+        <Field Name="ReportsTo">
+          <DataField>ReportsTo</DataField>
+        </Field>
+        <Field Name="PhotoPath">
+          <DataField>PhotoPath</DataField>
+        </Field>
+        <Field Name="name">
+          <Value>=Fields!FirstName.Value &amp; Fields!LastName.Value</Value>
+        </Field>
+      </Fields>
+      <Query>
+        <CommandText>$.value[*]</CommandText>
+        <DataSourceName>Master</DataSourceName>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <CustomProperties>
+    <CustomProperty>
+      <Name>DisplayType</Name>
+      <Value>Page</Value>
+    </CustomProperty>
+    <CustomProperty>
+      <Name>SizeType</Name>
+      <Value>Default</Value>
+    </CustomProperty>
+    <CustomProperty>
+      <Name>PaperOrientation</Name>
+      <Value>Portrait</Value>
+    </CustomProperty>
+    <CustomProperty>
+      <Name>master_Data_Set_Fields</Name>
+      <Value>{"EmployeeId":{"aggregate":"Sum","dataType":"Integer"},"LastName":{"aggregate":"Count","dataType":"String"},"FirstName":{"aggregate":"Count","dataType":"String"},"Title":{"aggregate":"Count","dataType":"String"},"TitleOfCourtesy":{"aggregate":"Count","dataType":"String"},"BirthDate":{"aggregate":"Count","dataType":"String"},"HireDate":{"aggregate":"Count","dataType":"String"},"Address":{"aggregate":"Count","dataType":"String"},"City":{"aggregate":"Count","dataType":"String"},"Region":{"aggregate":"Count","dataType":"String"},"PostalCode":{"aggregate":"Count","dataType":"String"},"Country":{"aggregate":"Count","dataType":"String"},"HomePhone":{"aggregate":"Count","dataType":"String"},"Extension":{"aggregate":"Count","dataType":"String"},"Photo":{"aggregate":"Count","dataType":"String"},"Notes":{"aggregate":"Count","dataType":"String"},"ReportsTo":{"aggregate":"Sum","dataType":"Integer"},"PhotoPath":{"aggregate":"Count","dataType":"String"}}</Value>
+    </CustomProperty>
+  </CustomProperties>
+  <dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+    <ThemeUri>Cordial.default.rdlx-theme</ThemeUri>
+  </dd:ReportThemes>
+</Report>
